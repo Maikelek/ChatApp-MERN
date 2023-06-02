@@ -13,8 +13,15 @@ app.use(morgan("common"));
 
 
 app.get("/", (req, res) => {
-    res.send("Maichat Backend: Main Page")
+    res.send("Maichat Backend: Main Page");
 })
+
+/* Routes */
+const userRouter = require('./routes/userRouter');
+app.use('/user', userRouter);
+
+const authRouter = require('./routes/authRouter');
+app.use('/auth', authRouter);
 
 mongoose.connect(process.env.MONGO_CONNECT, { useNewUrlParser: true })
   .then(() => {
