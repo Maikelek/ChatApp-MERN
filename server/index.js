@@ -23,8 +23,10 @@ app.use('/user', userRouter);
 const authRouter = require('./routes/authRouter');
 app.use('/auth', authRouter);
 
-mongoose.connect(process.env.MONGO_CONNECT, { useNewUrlParser: true })
-  .then(() => {
+mongoose.connect(process.env.MONGO_CONNECT, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
     console.log("Connected to MongoDB successfully");
   })
 

@@ -40,6 +40,9 @@ const UserSchema = new mongoose.Schema({
         type: Array,
         default: []
     },
-})
+},
+    {timestamps: true},
+    { collection: 'ritolezec' }
+)
 
 module.exports = mongoose.model("User", UserSchema);
