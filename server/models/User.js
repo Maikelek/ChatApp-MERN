@@ -42,7 +42,6 @@ const UserSchema = new mongoose.Schema({
     },
 },
     {timestamps: true},
-    { collection: 'ritolezec' }
 )
 
 module.exports = mongoose.model("User", UserSchema);
