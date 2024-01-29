@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
@@ -158,7 +158,7 @@ const Register = () => {
                     Register
                 </Button>
                 <Box sx={{ marginTop: '1rem', color: '#ffffff' }}>
-                    Already have an account? <Link href="/login" underline="always" color="primary">Login</Link>
+                    Already have an account? <Link to="/login" style={{ textDecoration: 'underline', color: '#1976d2' }}>Login</Link>
                 </Box>
             </Box>
         </Box>

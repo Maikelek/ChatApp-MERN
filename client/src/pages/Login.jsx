@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
@@ -27,7 +27,7 @@ const Login = () => {
                 minHeight: '100vh',
             }}
         >   
-            <Box  // THIS BOX SHOULD APPEAR ON FULL
+            <Box 
                 sx={{
                     display: 'flex',
                     backgroundColor: '#1e1e1e',
@@ -101,7 +101,7 @@ const Login = () => {
                     Login
                 </Button>
                 <Box sx={{ marginTop: '1rem', color: '#ffffff' }}>
-                    Don't have an account? <Link href="/register" underline="always" color="primary">Register</Link>
+                    Don't have an account? <Link to="/register" style={{ textDecoration: 'underline', color: '#1976d2' }}>Register</Link>
                 </Box>
             </Box>
         </Box>
